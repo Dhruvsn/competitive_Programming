@@ -61,8 +61,8 @@ vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
 
 int main() {
     // Sample inputs
-    vector<int> nums1 = {4, 9, 5, 4};
-    vector<int> nums2 = {9, 4, 9, 8, 4};
+    vector<int> nums1 = {1,2,2,1};
+    vector<int> nums2 = {2,2};
 
     // Call the function
     vector<int> combined = intersection(nums1, nums2);
