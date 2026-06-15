@@ -29,6 +29,35 @@ Node* reverse(Node* head) {
 	
 }
 
+Node* revereBetween(Node* head,int left ,int right){
+	
+	if(head == NULL || left == right) return head;
+
+	Node* dummy = new Node(0,head);
+	Node* prev = dummy;
+	
+	for(int i=1;i<left;i++){
+		prev = prev->next;
+	}
+
+	Node* curr = prev->next;
+
+	for(int i=0;i<right-left;i++){
+		Node* temp = curr->next;
+		curr->next = temp->next;
+		temp->next = prev->next;
+		prev->next = temp;
+		
+	}
+
+	
+	
+	return dummy->next;	
+	
+
+
+}
+
 Node* convertArrToLL(vector<int>& arr) {
 
     Node* head = new Node(arr[0]);
